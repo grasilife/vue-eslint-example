@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "format": "prettier --write **/*.{js,json,css,md}",
+    "eslint-check": "eslint --print-config path/to/main.js | eslint-config-prettier-check",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
