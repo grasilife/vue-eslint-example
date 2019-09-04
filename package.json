@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "format": "prettier --write **/*.{js,json,css,md,vue}",
+    "lint": "prettier --write **/*.{js,json,css,md,vue}",
     "eslint-check": "eslint --print-config path/to/main.js | eslint-config-prettier-check",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
@@ -21,7 +21,13 @@
     "eslint-loader": "^3.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.2.3",
+    "husky": "^3.0.5",
     "prettier": "1.18.2",
     "vue-template-compiler": "^2.6.10"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
